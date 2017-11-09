@@ -103,11 +103,7 @@
                     scope.state = State.Pulling;
                 }
 
-                if(scope.state == State.Pulling){
-                    event.preventDefault();
-                }
-
-                if(movement > 0){
+                                if(movement > 0){
                     scope.movement = Math.min(calculateMovement(movement, scope.mdeThreshold));
                     scope.progress = Math.min( scope.movement/scope.mdeThreshold, 1);
                     scope.$digest();
